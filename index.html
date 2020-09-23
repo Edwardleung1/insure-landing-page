@@ -10,6 +10,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Insure landing page</title>
   </head>
   <body>
@@ -23,14 +24,12 @@
             <img src="./images/logo.svg" alt="logo" />
           </div>
 
-          <div>
-            <ul>
-              <li><a href="#">How we work</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Account</a></li>
-              <li><a class="btn" href="#">View plans</a></li>
-            </ul>
-          </div>
+          <ul>
+            <li><a href="#">How we work</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a class="btn btn-reverse" href="#">View plans</a></li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -39,7 +38,7 @@
     <header>
       <!--Keeps track of the width-->
       <div class="container">
-        <div class="flex">
+        <div class="flex align-start">
           <div>
             <h1>Humanizing your insurance.</h1>
             <p>
@@ -51,7 +50,11 @@
           </div>
 
           <div>
-            <img src="./images/image-intro-desktop.jpg" alt="intro-desktop" />
+            <img
+              src="./images/image-intro-desktop.jpg"
+              alt="intro-desktop"
+              class="family"
+            />
           </div>
         </div>
       </div>
@@ -64,7 +67,7 @@
         <div class="flex">
           <div>
             <img src="./images/icon-snappy-process.svg" alt="snappy-process" />
-            <h4>Snappy Process</h4>
+            <h3>Snappy Process</h3>
             <p>
               Our application process can be completed in minutes, not hours.
               Don't get stuck filling in tedious forms.
@@ -76,7 +79,7 @@
               src="./images/icon-affordable-prices.svg"
               alt="affordable-prices"
             />
-            <h4>Affordable Prices</h4>
+            <h3>Affordable Prices</h3>
             <p>
               We don't want you worrying about high monthly costs. Our prices
               may be low, but we still offer the best coverage possible.
@@ -85,7 +88,7 @@
 
           <div>
             <img src="./images/icon-people-first.svg" alt="people-first" />
-            <h4>Snappy Process</h4>
+            <h3>Snappy Process</h3>
             <p>
               Our plans aren't full of conditions and clauses to prevent
               payouts. We make sure you're covered when you need it.
@@ -117,35 +120,33 @@
             <img src="./images/logo.svg" alt="logo" />
           </div>
 
-          <div>
-            <ul>
-              <li>
-                <a href="#"
-                  ><img src="./images/icon-facebook.svg" alt="facebook"
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="./images/icon-twitter.svg" alt="twitter"
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="./images/icon-pinterest.svg" alt="pinterest"
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="./images/icon-instagram.svg" alt="instagram"
-                /></a>
-              </li>
-            </ul>
-          </div>
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="./images/icon-facebook.svg" alt="facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./images/icon-twitter.svg" alt="twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./images/icon-pinterest.svg" alt="pinterest"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./images/icon-instagram.svg" alt="instagram"
+              /></a>
+            </li>
+          </ul>
         </div>
 
         <div class="flex">
           <div>
-            <h3>Our Company</h3>
+            <h4>Our Company</h4>
             <ul>
               <li><a href="#">How we work</a></li>
               <li><a href="#">Why Insure?</a></li>
@@ -155,7 +156,7 @@
           </div>
 
           <div>
-            <h3>Help Me</h3>
+            <h4>Help Me</h4>
             <ul>
               <li><a href="#">FAQ</a></li>
               <li><a href="#">Terms Of Use</a></li>
@@ -165,7 +166,7 @@
           </div>
 
           <div>
-            <h3>Contact</h3>
+            <h4>Contact</h4>
             <ul>
               <li><a href="#">Sales</a></li>
               <li><a href="#">Support</a></li>
@@ -174,7 +175,7 @@
           </div>
 
           <div>
-            <h3>Others</h3>
+            <h4>Others</h4>
             <ul>
               <li><a href="#">Careers</a></li>
               <li><a href="#">Press</a></li>
