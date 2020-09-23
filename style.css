@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display|Karla:400,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-violet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+  --very-dark-violet: hsl(270, 9%, 17%);
+  --dark-grayish-violet: hsl(273, 4%, 51%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+  color: var(--dark-violet);
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'DM Serif Display', sans-serif;
+}
+
+h1 {
+  font-size: 4em;
+  position: relative;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin: 0;
+  padding-top: 50px;
+}
+
+/* add header line */
+h1::before {
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 150px;
+}
+
+/* btn styling */
+.btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 15px 25px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-reverse {
+  border-color: var(--dark-violet);
+  color: var(--dark-violet);
+  cursor: pointer;
+}
+
+/* center everything on lg screens*/
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1200px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* the .flex selector only selects div class nested directly inside a .flex */
+/* pushes the ul to the right as much as possible */
+.flex > div {
+  flex: 1;
+}
+
+/* items are placed at the start of the cross axis */
+.align-start {
+  align-items: flex-start;
+}
+
+/* Nav styling */
+/* so nav ul displays in a row direction */
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0px;
+}
+
+nav li {
+  margin-left: 30px;
+}
+
+nav li a {
+  color: var(--dark-grayish-violet);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* header styling */
+header {
+  background-color: var(--dark-violet);
+  color: #fff;
+  padding: 50px 0px;
+  position: relative;
+  margin-bottom: 250px;
+}
+
+/* setting header background image, position absolute */
+header::after {
+  content: '';
+  background-image: url('./images/bg-pattern-intro-right-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+header::before {
+  content: '';
+  background-image: url('./images/bg-pattern-intro-left-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  position: absolute;
+  bottom: -40%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* push img downwards*/
+.family {
+  margin-bottom: -250px;
+}
