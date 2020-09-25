@@ -130,6 +130,11 @@ header {
   margin-bottom: 250px;
 }
 
+/* everything inside header is 1 */
+header * {
+  z-index: 1;
+}
+
 /* setting header background image, position absolute */
 header::after {
   content: '';
@@ -140,7 +145,8 @@ header::after {
   top: 0;
   right: 0;
   height: 100%;
-  width: 100%;
+  width: 50%;
+  z-index: 2;
 }
 
 header::before {
@@ -153,6 +159,7 @@ header::before {
   left: 0;
   height: 100%;
   width: 100%;
+  z-index: 0;
 }
 
 /* push img downwards*/
@@ -161,29 +168,22 @@ header::before {
 }
 
 /* section styling */
+/* img is part of the section, so we can click and select text */
 .bg-violet {
   background-color: var(--dark-violet);
-  padding: 70px;
-  position: relative;
-}
-
-.bg-violet::before {
-  content: '';
   background-image: url('./images/bg-pattern-how-we-work-desktop.svg');
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 50% 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
+  padding: 70px;
+  margin: 100px auto;
 }
 
 .bg-violet h2 {
   color: #fff;
+  font-size: 3em;
   padding: 0;
-  width: 75%;
+  width: 60%;
 }
 
 .tile {
@@ -193,4 +193,39 @@ header::before {
 
 /* footer styling */
 footer {
+  background-color: var(--very-light-gray);
+  background-image: url('./images/bg-pattern-footer-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 30px 0px;
+}
+
+footer h4 {
+  color: var(--dark-grayish-violet);
+  text-transform: uppercase;
+}
+
+footer ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+footer ul.flex li {
+  margin-left: 15px;
+}
+
+footer li {
+  margin-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+footer li a {
+  color: var(--very-dark-violet);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--grayish-blue);
+  margin-bottom: 30px;
 }
