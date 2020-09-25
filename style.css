@@ -106,16 +106,26 @@ p {
 
 /* Nav styling */
 nav {
-  padding: 20px 0;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
 }
 
 nav .hamburger {
   display: none;
 }
 
+nav .hamburger:focus {
+  outline: none;
+}
+
 /* so nav ul displays in a row direction */
 nav ul {
   display: flex;
+  align-items: center;
   list-style-type: none;
   padding: 0px;
 }
@@ -137,6 +147,7 @@ header {
   color: #fff;
   padding: 50px 0px;
   position: relative;
+  margin-top: 80px;
   margin-bottom: 250px;
 }
 
@@ -250,11 +261,27 @@ footer li a {
     flex-direction: column;
   }
 
+  nav {
+    padding: 20px;
+  }
+
   nav .hamburger {
     background-color: transparent;
     border: 0;
     cursor: pointer;
     display: flex;
+  }
+
+  nav .hamburger .close {
+    display: none;
+  }
+
+  nav .hamburger.show .open {
+    display: none;
+  }
+
+  nav .hamburger.show .close {
+    display: block;
   }
 
   nav .flex {
@@ -267,6 +294,33 @@ footer li a {
 
   nav ul {
     display: none;
+  }
+
+  nav ul.show {
+    background-color: var(--very-dark-violet);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding-top: 30px;
+    margin: 0;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    z-index: 100;
+  }
+
+  nav ul li {
+    margin: 20px 0;
+  }
+
+  nav ul a {
+    color: #fff;
+  }
+
+  .btn-reverse {
+    border-color: #fff;
+    color: #fff;
   }
 
   header {
