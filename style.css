@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display|Karla:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display|Karla:400,700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -25,7 +25,8 @@ h3 {
   font-family: 'DM Serif Display', sans-serif;
 }
 
-h1 {
+h1,
+h2 {
   font-size: 4em;
   position: relative;
   letter-spacing: 2px;
@@ -34,8 +35,17 @@ h1 {
   padding-top: 50px;
 }
 
-/* add header line */
-h1::before {
+h3 {
+  font-size: 2em;
+}
+
+p {
+  opacity: 0.8;
+  font-size: 1.2em;
+}
+
+/* add header line on headings */
+.line-top::before {
   content: '';
   background-color: #fff;
   position: absolute;
@@ -43,6 +53,11 @@ h1::before {
   left: 0;
   height: 1px;
   width: 150px;
+}
+
+/* change bgc on h2 */
+.line-violet::before {
+  background-color: var(--dark-violet);
 }
 
 /* btn styling */
@@ -134,7 +149,7 @@ header::before {
   background-repeat: no-repeat;
   background-position: bottom left;
   position: absolute;
-  bottom: -40%;
+  bottom: -50%;
   left: 0;
   height: 100%;
   width: 100%;
@@ -143,4 +158,39 @@ header::before {
 /* push img downwards*/
 .family {
   margin-bottom: -250px;
+}
+
+/* section styling */
+.bg-violet {
+  background-color: var(--dark-violet);
+  padding: 70px;
+  position: relative;
+}
+
+.bg-violet::before {
+  content: '';
+  background-image: url('./images/bg-pattern-how-we-work-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 50% 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-violet h2 {
+  color: #fff;
+  padding: 0;
+  width: 75%;
+}
+
+.tile {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+/* footer styling */
+footer {
 }
